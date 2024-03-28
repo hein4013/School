@@ -1,0 +1,64 @@
+noti model(teacher to student)/(student to student)
+-name(filter)
+-header
+-about
+-author
+
+timetable(only my class)
+class(teacher)
+-name(g-0)
+-author
+-subject(content)
+-days(sat sun or 5day)
+-time
+
+friend(other teacher)
+
+student list(student get all)
+
+profile(teacher)
+-name(readonly)
+-email(readonly)
+-phone
+-class
+-photo
+
+report(to admin)
+-about
+
+record(view by teacher)
+-class
+-date(date.now)
+-id 
+-user(student)
+-is active(record)
+
+
+
+
+profile(teacher)
+-name(readonly)
+-email(readonly)
+-phone
+-class
+-photo
+
+course(teacher class)
+-get all
+
+friend (student List)
+-name and photo phone
+
+notification(noti)
+only see
+
+certificate(give from admin)
+-file
+
+
+check in(sign by student)
+-id
+-user
+-checkin(datetime)
+-chckout(datetime)
+-date(date unique)

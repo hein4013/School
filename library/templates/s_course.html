@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}
+student Course
+{% endblock %}
+{% block body %}
+<h2>Course</h2><hr><hr>
+<div class="container">
+  <form method="POST">
+    {% csrf_token %}
+    <div class="row justify-content-center">
+    {% for i in course %}
+    <div class="card shadow col-sm-12 col-md-4 col-lg-3 p-2 m-2" style="width: 18rem;">
+        <div class="card-body">
+            
+          <h4 class="card-title p-2">Subject : <b>{{i.subject}}</b></h4>
+          <h5 class="card-subtitle mb-2 text-body-secondary pt-2 pb-2 ps-2">Content : <i>{{i.content}}</i></h5>
+          <p class="card-text p-2">Teach By : {{i.author}}</p>
+          <p class="card-text p-2">Type : {{i.day}}</p>
+          <p class="card-text p-2">Start Date : {{i.date}}</p>
+          <p class="card-text p-2">Time :From  {{i.strtime}} to {{i.endtime}} </p>
+          <button class="btn btn-primary" type="submit">Join</button>
+        </div>
+      </div>
+{% endfor %}</div>
+</form>
+</div>
+{% endblock %}

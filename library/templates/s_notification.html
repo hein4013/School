@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}
+student profile
+{% endblock %}
+{% block body %}
+<h2>Notification</h2><hr><hr>
+<div class="container">
+    <h4>You have 1 Notification 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="btn btn-outline-info" 
+        onclick="document.getElementById('open').style.display='block'" >open</div>
+    </h4>
+    {% for i in noti %}
+    <div class="" id="open" style="display: none;">
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">header : {{i.header}}</h4>
+            <p>about : {{i.content}}</p>
+            <hr>
+            <p class="mb-0">by : {{i.author}} </p>
+          </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

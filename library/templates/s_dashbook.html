@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}
+student dashbook
+{% endblock %}
+{% block body %}
+<div class="container mt-3">
+    <h1>Dashbook</h1><hr><hr>
+    <div class="col-sm-12 card-group ">
+      <div class="card text-bg-secondary mb-3 mx-3" style="max-width: 18rem; height: 10rem;">
+          <div class="card-body">
+            <h5><a href="/student/course/" class="card-title text-center mt-5" style="text-decoration: none;">MY Course</a></h5>  
+          </div>
+      </div>
+      <div class="card text-bg-success mb-3 mx-3" style="max-width: 18rem; height: 10rem;">
+          <div class="card-body">
+            <h5><a href="/student/friend/" class="card-title text-center mt-5" style="text-decoration: none;">Friend List</a></h5>
+          </div>
+      </div>
+      <div class="card text-bg-primary mb-3 mx-3" style="max-width: 18rem; height: 10rem;">
+          <div class="card-body">
+            <h5><a href="/student/record/" class="card-title text-center mt-5" style="text-decoration: none;">Record</a></h5> 
+            <div class="mx-3 mt-3" style="color: red;font-weight: bold;font-style: italic;"> U only need to once record for one day</div>
+          </div>
+      </div>
+      <div class="card text-bg-danger mb-3 mx-3" style="max-width: 18rem; height: 10rem;">
+          <div class="card-body">
+            <h5><a href="/student/notification/" class="card-title text-center mt-5" style="text-decoration: none;">Notification</a></h5>
+          </div>
+      </div>
+  </div>
+</div>
+{% endblock %}
+

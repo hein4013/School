@@ -1,0 +1,32 @@
+{% extends "t_base.html" %}
+{% block title %}
+teacher dashbook
+{% endblock %}
+{% block body %}
+<div class="container mt-3">
+    <h1>Dashbook</h1><hr><hr>
+    <div class="col-sm-12 card-group ">
+        <div class="card text-bg-secondary mb-3 mx-3" style="max-width: 18rem; height: 10rem;">
+            <div class="card-body">
+              <h5><a href="/teacher/timetable/" class="card-title text-center mt-5" style="text-decoration: none;">MY Class</a></h5>  
+            </div>
+        </div>
+        <div class="card text-bg-success mb-3 mx-3" style="max-width: 18rem; height: 10rem;">
+            <div class="card-body">
+              <h5><a href="/teacher/studentList/" class="card-title text-center mt-5" style="text-decoration: none;">Student List</a></h5>
+            </div>
+        </div>
+        <div class="card text-bg-primary mb-3 mx-3" style="max-width: 18rem; height: 10rem;">
+            <div class="card-body">
+              <h5><a href="/teacher/checkin/" class="card-title text-center mt-5" style="text-decoration: none;">check in</a></h5> 
+            </div>
+        </div>
+        <div class="card text-bg-danger mb-3 mx-3" style="max-width: 18rem; height: 10rem;">
+            <div class="card-body">
+              <h5><a href="/teacher/notification/" class="card-title text-center mt-5" style="text-decoration: none;">Notification</a></h5>
+            </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}

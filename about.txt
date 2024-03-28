@@ -1,0 +1,16 @@
+login as student-can view profile
+		-can join course
+		-can see u friend detail
+		-can see noti from teacher
+		-can get from certi
+		-need to record for attandance
+		-logout
+login as teacher-can view profile
+		-can create course
+		-can view time table
+		-can view friend detail
+		-can view student attandance as Report
+		-can send noti to student
+		-can see Ur studentList that is join ur course
+		logout
+login as admin - all permission holder

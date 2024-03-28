@@ -1,0 +1,32 @@
+{% extends "t_base.html" %}
+{% block title %}
+teacher profile
+{% endblock %}
+{% block body %}
+<h2>Notification</h2><hr><hr>
+<center>
+    <h3>Create notification</h3>
+
+<div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+    <div  class=" card " style="width: 80%;">
+
+        <div class="input-group p-3">
+            <span class="input-group-text" id="basic-addon1">header</span>
+            <input type="text" name="header" class="form-control" placeholder="About" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group p-3">
+            <span class="input-group-text" id="basic-addon1">Content</span>
+            <input type="text" name="content" class="form-control" placeholder="content" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        
+        
+        <div class="p-3 ">
+            <label for="formFile" class="form-label" style="font-weight: bold;">file or photo</label>
+            <input class="form-control" name="file" type="file" id="formFile">
+        </div>
+        <button class="btn btn-primary m-3" type="submit">Submit</button>
+    </div></form>
+</div></center>
+{% endblock %}

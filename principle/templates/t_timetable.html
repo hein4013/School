@@ -1,0 +1,32 @@
+{% extends "t_base.html" %}
+{% block title %}
+Teacher Timetable
+{% endblock %}
+{% block body %}
+<h2>Timetable</h2><hr><hr>
+
+<div class="bg-gray-100 font-sans container" >
+    <div class="container mx-auto my-10 p-8 bg-white shadow-md">
+        <h1 class="text-3xl font-bold mb-8">Course List</h1>
+        
+        <table class="table table-success table-striped-columns">
+            <thead>
+            <tr>
+                <td>Course ID</td>
+                <td>Subject</td>
+                <td>Start time</td>
+                <td>End time</td>
+            </tr>
+            {% for i in course %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.subject}}</td>
+                <td>{{i.strtime}}</td>
+                <td>{{i.endtime}}</td>
+            </tr>
+            {% endfor %}
+        </thead>
+          </table>
+</div>
+</div>
+{% endblock %}

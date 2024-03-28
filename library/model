@@ -1,0 +1,22 @@
+student
+    id=auto
+    name=char
+    parent's name=char
+    birthday=datetime
+    course=model.course
+
+teacher
+    id=auto
+    name=char
+    password=makepwd
+    major_subject=select
+    created_at=datetime.now
+    slary=int
+    age=int
+
+course
+    id=auto
+    name=char
+    teacher_name=model.teacher
+    time=time to time
+

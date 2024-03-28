@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}
+student profile
+{% endblock %}
+{% block body %}
+<h2 class="mt-5">Create Your Profile !</h2>
+<div class="container mt-5">
+    <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+    <div  class=" card " style="width: 80%;">
+        
+        <div class="input-group p-3">
+            <span class="input-group-text" id="basic-addon1">Your Name</span>
+            <input type="text" class="form-control" value="{{userData.username}}" readonly  aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group p-3">
+            <span class="input-group-text" id="basic-addon1">Email</span>
+            <input type="email" class="form-control" value="{{userData.email}}" readonly  aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group p-3">
+            <span class="input-group-text" id="basic-addon1">Phone</span>
+            <input type="text" class="form-control" name="phone" placeholder="+959784519263"  aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group p-3">
+            <select name="course" class="form-control">
+                {% for c in course %}
+                <option value="{{c.id}}">{{c.subject}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="p-3 ">
+            <label for="formFile" class="form-label">Profile Photo</label>
+            <input class="form-control" type="file" name="image" id="formFile">
+        </div>
+        <button class="btn btn-primary m-3" type="submit">Submit</button>
+        
+    </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}
+Student profile view
+{% endblock %}
+{% block body %}
+<div class="container">
+    <h2>Hello {{user.username}}</h2><hr><hr>
+   
+<center>
+     
+     <div class="card" style="width: 18rem;">
+        <img src="{{profile.image.url}}" class=" rounded card-img-top">
+        <div class="card-body">
+          <p class="card-text">ID :{{user.id}}</p>
+          <p class="card-text">Phone :{{profile.phone}}</p>
+          <p class="card-text">Email :{{user.email}}</p>
+          <p class="card-text"> Course : {{profile.course}}</p>
+          
+        </div>
+      </div>
+  
+</center>
+   
+</div>
+{% endblock %}
